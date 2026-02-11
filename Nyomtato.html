@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <title>3D Nyomtatás – Teljes Bemutató</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to right, #f8e1f4, #ffffff);
+        line-height: 1.6;
+      }
+
+      .container {
+        width: 90%;
+        max-width: 1100px;
+        margin: auto;
+        padding: 20px;
+      }
+
+      header {
+        text-align: center;
+        padding: 40px;
+        background-color: #f0b5d9;
+        color: #6d3f7c;
+        border-radius: 10px;
+      }
+
+      .section {
+        background-color: white;
+        margin-top: 25px;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(200, 150, 200, 0.4);
+      }
+
+      h2 {
+        color: #b97cc9;
+        margin-bottom: 10px;
+      }
+
+      .button {
+        margin-top: 10px;
+        padding: 8px 15px;
+        background-color: #e7a7e4;
+        border: none;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .button:hover {
+        background-color: #d48cd0;
+      }
+
+      .content {
+        display: none;
+        margin-top: 15px;
+        background-color: #f9e6f7;
+        padding: 15px;
+        border-radius: 5px;
+      }
+
+      img {
+        width: 100%;
+        max-width: 350px;
+        margin-top: 10px;
+        border-radius: 8px;
+        display: block;
+      }
+
+      footer {
+        text-align: center;
+        margin-top: 40px;
+        padding: 15px;
+        background-color: #cc8bc9;
+        color: white;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <h1>3D Nyomtatás</h1>
+        <p>A modern gyártás forradalma</p>
+      </header>
+
+      <!-- Mi ez -->
+      <div class="section">
+        <h2>Mi az a 3D nyomtatás?</h2>
+        <button class="button" onclick="toggle('s1')">Megnyitás</button>
+        <div class="content" id="s1">
+          A 3D nyomtatás egy additív gyártási eljárás, amely digitális modell
+          alapján rétegről rétegre hoz létre fizikai tárgyakat. Gyors
+          prototípusgyártásra és egyedi alkatrészek készítésére használják.
+        </div>
+      </div>
+
+      <!-- Anyagok -->
+      <div class="section">
+        <h2>Anyagok</h2>
+        <button class="button" onclick="toggle('s2')">Megnyitás</button>
+        <div class="content" id="s2">
+          PLA – könnyen nyomtatható, környezetbarátabb műanyag.<br />
+          ABS – erősebb, hőállóbb anyag.<br />
+          Gyanta – nagy részletességhez.<br />
+          Fém – ipari alkalmazásokhoz.
+        </div>
+      </div>
+
+      <!-- Felhasználás -->
+      <div class="section">
+        <h2>Felhasználás</h2>
+        <button class="button" onclick="toggle('s3')">Megnyitás</button>
+        <div class="content" id="s3">
+          Orvosi implantátumok, autóipari alkatrészek, építészeti modellek,
+          oktatás és hobbi tárgyak készítése.
+        </div>
+      </div>
+
+      <!-- Keletkezése -->
+      <div class="section">
+        <h2>Keletkezése</h2>
+        <button class="button" onclick="toggle('s4')">Megnyitás</button>
+        <div class="content" id="s4">
+          1984-ben Chuck Hull fejlesztette ki az első sztereolitográfiás 3D
+          nyomtatási eljárást.
+        </div>
+      </div>
+
+      <!-- Eszközei -->
+      <div class="section">
+        <h2>Eszközei</h2>
+        <button class="button" onclick="toggle('s5')">Megnyitás</button>
+        <div class="content" id="s5">
+          3D nyomtató, filament vagy gyanta, számítógép, CAD tervezőprogram és
+          szeletelő szoftver.
+        </div>
+      </div>
+
+      <!-- Fejlődési állomásai -->
+      <div class="section">
+        <h2>Fejlődési állomásai</h2>
+        <button class="button" onclick="toggle('s6')">Megnyitás</button>
+        <div class="content" id="s6">
+          1984 – SLA technológia<br />
+          1990-es évek – Ipari alkalmazás<br />
+          2005 – RepRap projekt<br />
+          2010 után – Fémnyomtatás<br />
+          Napjainkban – Épületek és szervek nyomtatása
+        </div>
+      </div>
+
+      <!-- Perspektívák -->
+      <div class="section">
+        <h2>Benne rejlő perspektívák</h2>
+        <button class="button" onclick="toggle('s7')">Megnyitás</button>
+        <div class="content" id="s7">
+          Az orvostudományban szervnyomtatás, az űriparban helyszíni
+          alkatrészgyártás, az építőiparban gyors házépítés, valamint személyre
+          szabott tömeggyártás.
+        </div>
+      </div>
+
+      <!-- Eredete képekkel -->
+      <div class="section">
+        <h2>Eredete</h2>
+        <button class="button" onclick="toggle('s8')">Megnyitás</button>
+        <div class="content" id="s8">
+          A 3D nyomtatás az 1980-as években indult fejlődésnek.
+
+          <strong>Régi 3D nyomtató:</strong>
+          <img src="regi.jpg" alt="Régi 3D nyomtató" />
+
+          <strong>Modern 3D nyomtató:</strong>
+          <img src="modern.jpg" alt="Modern 3D nyomtató" />
+        </div>
+      </div>
+
+      <footer>© 2026 3D Nyomtatás Projekt</footer>
+    </div>
+
+    <script>
+      function toggle(id) {
+        var elem = document.getElementById(id);
+        if (elem.style.display === "block") {
+          elem.style.display = "none";
+        } else {
+          elem.style.display = "block";
+        }
+      }
+    </script>
+  </body>
+</html>
